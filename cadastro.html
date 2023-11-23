@@ -1,36 +1,100 @@
-  <html lang="en">
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/cadastro.css">
     <title>Cadastro</title>
-  </head>
-  <body>
-    
-    <div class="container-principal">
-      <h1>Crie sua Conta</h1>
-      <div class="container_nome_nasc">
-        <h4>Nome Completo</h4>
-        <input type="text">
-        <h1>Data de nascimento</h1>
-        <input type="date">
-      </div>
-      
-      <div class="container_opcao">
-        <h2>Escolha uma opcao:</h2>
-        <button>Produtor Rural</button>
-        <button>Técnico</button>
-      </div>
-      
-      <div class="container-senha">
-        <h4>Senha</h4>
-        <input type="password">
-        <h4>Confirmar Senha</h4>
-        <input type="password"> 
-        <button>Salvar</button>
-      </div>
-      
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f4f4; /* Cor de fundo do corpo */
+        }
 
+        .container-principal {
+            background-color: #fff; /* Cor de fundo do contêiner principal */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+            text-align: center;
+        }
+
+        h1 {
+            color: #2146F6; /* Cor do cabeçalho principal */
+        }
+
+        .container_nome_nasc,
+        .container_opcao,
+        .container-senha {
+            margin-top: 20px;
+        }
+
+        h4 {
+            color: #6A81F7; /* Cor do subtítulo */
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #2146F6; /* Borda azul */
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #E76E35; /* Cor do botão (laranja) */
+            color: #fff; /* Cor do texto do botão */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #C45A2B; /* Cor do botão ao passar o mouse */
+        }
+
+        .container_opcao button {
+            margin: 0 10px;
+        }
+
+        .container-senha button {
+            width: 100%; /* Botão de largura total */
+        }
+    </style>
+</head>
+<body>
+    <div class="container-principal">
+        <h1>Crie sua Conta</h1>
+        <div class="container_nome_nasc">
+            <h4>Nome Completo</h4>
+            <input type="text">
+            <h4>Data de nascimento</h4>
+            <input type="date">
+        </div>
+        
+        <div class="container_opcao">
+            <h2>Escolha uma opção:</h2>
+            <button>Produtor Rural</button>
+            <button>Técnico</button>
+        </div>
+        
+        <div class="container-senha">
+            <h4>Senha</h4>
+            <input type="password">
+            <h4>Confirmar Senha</h4>
+            <input type="password"> 
+            <button>Salvar</button>
+        </div>
     </div>
-  </body>
-  </html>
+</body>
+</html>

@@ -1,10 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/style/cadastropropriedade.css">
-  <title>Cadastro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f4f4; /* Cor de fundo do corpo */
+        }
+
+        .container-propriedade {
+            background-color: #fff; /* Cor de fundo do contêiner principal */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+            text-align: center;
+        }
+
+        h1 {
+            color: #2146F6; /* Cor do cabeçalho principal */
+        }
+
+        .container-propriedade-form {
+            margin-top: 20px;
+        }
+
+        h4 {
+            color: #6A81F7; /* Cor do nome dos campos */
+            margin-top: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #2146F6; /* Borda azul */
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #E76E35; /* Cor do botão (laranja) */
+            color: #fff; /* Cor do texto do botão */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #C45A2B; /* Cor do botão ao passar o mouse */
+        }
+
+        /* Estilo para checkboxes e campo de texto */
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-container input[type="checkbox"],
+        .checkbox-container input[type="text"] {
+            margin-top: 8px;
+            margin-bottom: 16px;
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
 
@@ -21,10 +90,18 @@
       <input type="number">
 
       <h4>Atividades Realizadas</h4>
-      <select>
-        <option value="caprino">Caprino</option>
-        <option value="ovino">Ovino</option>
-      </select>
+      <div class="checkbox-container">
+        <input type="checkbox" id="ovino" name="atividade" value="ovino">
+        <label for="ovino">Ovino</label>
+        
+        <input type="checkbox" id="caprino" name="atividade" value="caprino">
+        <label for="caprino">Caprino</label>
+
+        <input type="checkbox" id="outrasAtividades" name="atividade" value="outrasAtividades">
+        <label for="outrasAtividades">Outras</label>
+
+        <input type="text" id="outrasAtividadesDescricao" name="outrasAtividadesDescricao" placeholder="Descreva outras atividades">
+      </div>
 
       <h4>Responsável Técnico</h4>
       <input type="text">
