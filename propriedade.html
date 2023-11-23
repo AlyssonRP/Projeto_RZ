@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center; /* Centraliza na tela verticalmente */
+        }
+
+        section {
+            margin: 20px;
+            text-align: center;
+            flex: 1;
+            display: flex; /* Adicionando display flex para os elementos ficarem lado a lado */
+            align-items: flex-start; /* Alinhando os itens ao topo */
+            justify-content: center; /* Centralizando os itens horizontalmente */
+            flex-wrap: wrap; /* Adicionando flex-wrap para que os elementos quebrem para a próxima linha quando não houver espaço suficiente */
+        }
+
+        .propertyInfo {
+            text-align: left; /* Ajuste para alinhar o texto à esquerda */
+            margin-right: 20px; /* Adicionando margem entre a foto e os textos */
+            margin-bottom: 20px; /* Adicionando margem abaixo do bloco de propriedade */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: #6A81F7;
+        }
+
+        img {
+            margin-bottom: 10px;
+            border-radius: 8px; /* Adicionando borda arredondada à imagem */
+            width: 400px; /* Ajustando a largura da imagem */
+        }
+
+        p {
+            margin-bottom: 10px;
+            color: #7FA4C5;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2146F6;
+        }
+
+        /* Adicionando um pouco de estilo para os botões */
+        button {
+            background-color: #2146F6;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        /* Corrigindo o tamanho dos retângulos */
+        .rectangle {
+            display: inline-block;
+            width: 100px;
+            height: 120px;
+            margin: 0 10px;
+            margin-bottom: 20px; /* Adicionando margem abaixo dos retângulos */
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;
+            padding-top: 20px; /* Ajustando o espaço para o número ficar no centro */
+        }
+
+        .rectangle.ativos {
+            background-color: #6A81F7;
+        }
+
+        .rectangle.inativos {
+            background-color: #6A81F7;
+        }
+
+        .rectangle.externos {
+            background-color: #6A81F7;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="propertyInfo">
+            <h2>Propriedade</h2>
+            <img src="img/propriedade.png" alt="Imagem da Propriedade">
+            <p>Nome da Propriedade</p>
+            <p>Localização</p>
+            <label for="criarConta">Crie sua conta</label>
+
+            <!-- Adicionando os botões abaixo dos retângulos -->
+            <div>
+                <!-- Corrigindo o tamanho dos retângulos -->
+                <div class="rectangle ativos">0<br>Ativos</div>
+                <div class="rectangle inativos">0<br>Inativos</div>
+                <div class="rectangle externos">0<br>Externos</div>
+            </div>
+
+            <div>
+                <!-- Adicionando os botões abaixo dos retângulos -->
+                <button onclick="pesquisar()">Pesquisar</button>
+                <button onclick="adicionar()">Adicionar</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Funções de exemplo para os botões
+        function pesquisar() {
+            alert("Botão Pesquisar clicado!");
+        }
+
+        function adicionar() {
+            alert("Botão Adicionar clicado!");
+        }
+    </script>
+</body>
+</html>

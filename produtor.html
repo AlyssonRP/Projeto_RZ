@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center; /* Centraliza na tela verticalmente */
+        }
+
+        section {
+            margin: 20px;
+            text-align: center;
+            flex: 1;
+            display: flex; /* Adicionando display flex para os elementos ficarem lado a lado */
+            align-items: center; /* Alinhando os itens ao centro */
+        }
+
+        .profileImage {
+            margin-right: 20px; /* Adicionando margem para separar a foto do texto */
+        }
+
+        img {
+            border-radius: 50%;
+            width: 150px; /* Definindo a largura da imagem */
+        }
+
+        .userInfo {
+            text-align: left; /* Ajuste para alinhar o texto à esquerda */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: #6A81F7;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #7FA4C5;
+        }
+
+        input {
+            width: 80%; /* Reduzindo a largura para 80% do contêiner pai */
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border-color: #2146F6;
+        }
+
+        /* Adicionando estilo para o nome do usuário */
+        .userName {
+            color: #2146F6;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="profileImage">
+            <img src="img/produtor.png" alt="Imagem de Perfil" width="150">
+        </div>
+        <div class="userInfo">
+            <h2>Proprietário</h2>
+            <span class="userName">Nome do Usuário</span>
+        </div>
+    </section>
+
+    <!-- Campos de nome completo, data de nascimento e email ficam abaixo -->
+    <label for="nomeCompleto">Nome Completo</label>
+    <input type="text" id="nomeCompleto" name="nomeCompleto" value="Nome Completo do Usuário" disabled>
+
+    <label for="dataNascimento">Data de Nascimento</label>
+    <input type="date" id="dataNascimento" name="dataNascimento" value="Data de Nascimento do Usuário" disabled>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" value="email@example.com" disabled>
+</body>
+</html>

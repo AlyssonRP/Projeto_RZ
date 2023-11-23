@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center; /* Centraliza na tela verticalmente */
+        }
+
+        nav {
+            background-color: #333; /* Cor de fundo do menu lateral */
+            color: #fff;
+            width: 200px;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-top: 0; /* Removendo a margem superior */
+        }
+
+        nav label {
+            display: block;
+            background-color: #2146F6; /* Cor de fundo azul para o label "Menu" */
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 10px;
+            width: 100%; /* Largura 100% do label para preencher a largura do menu */
+            box-sizing: border-box; /* Evita que o padding aumente a largura total */
+        }
+
+        nav .logged-in-user {
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <label>Menu</label>
+        <div class="logged-in-user">Nome da Pessoa Logada</div>
+        <a href="#">Home</a>
+        <a href="#">Meu Perfil</a>
+        <a href="#">Equipamentos</a>
+        <a href="#">Sair</a>
+    </nav>
+</body>
+</html>
