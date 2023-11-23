@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo,
+.login {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.logo img {
+  
+  max-width: 100%;
+  height: auto;
+}
+
+.login-form {
+  max-width: 300px;
+  margin: auto;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.login-form button {
+  background-color: #E76E35;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.botao-cadastrar{
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .logo,
+  .login {
+    flex: 1 1 100%;
+  }
+}
+
+/* CSS Cadastro.html */
+
+

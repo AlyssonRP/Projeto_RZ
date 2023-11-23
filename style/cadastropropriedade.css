@@ -1,0 +1,49 @@
+/* Adicione esta parte no seu arquivo cadastro.css */
+body{
+  
+}
+
+.container-propriedade {
+  background-color: #fff; /* Cor principal azul */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #3366cc; /* Cor do texto branco */
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container-propriedade-form {
+  margin: 20px auto;
+}
+
+.container-propriedade h4,
+.container-propriedade input,
+.container-propriedade select,
+.container-propriedade button {
+  display: block;
+  margin: 10px auto;
+}
+
+.container-propriedade input,
+.container-propriedade select,
+.container-propriedade button {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border-color: #3366cc;
+}
+
+.container-propriedade select {
+  margin-bottom: 20px;
+}
+
+.container-propriedade button {
+  background-color: #ff8c00; /* Cor secundária laranja */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.container-propriedade button:hover {
+  background-color: #ff4500; /* Laranja mais escuro ao passar o mouse */
+}
