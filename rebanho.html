@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebanho</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f4f4; /* Cor de fundo do corpo */
+        }
+
+        .container-rebanho {
+            background-color: #fff; /* Cor de fundo do contêiner principal */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+            text-align: center;
+        }
+
+        h1 {
+            color: #2146F6; /* Cor do cabeçalho principal */
+        }
+
+        label {
+            color: #6A81F7; /* Cor do rótulo */
+            margin-top: 20px;
+            display: block;
+        }
+
+        ul {
+            list-style-type: none; /* Remover marcadores da lista */
+            padding: 0;
+        }
+
+        li {
+            margin: 5px 0;
+            cursor: pointer;
+            background-color: #E76E35; /* Cor de fundo da lista (laranja) */
+            color: #fff; /* Cor do texto da lista */
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        li:hover {
+            background-color: #C45A2B; /* Cor de fundo da lista ao passar o mouse */
+        }
+
+        #informacoesAnimal {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-rebanho">
+        <h1>Rebanho</h1>
+        <label>Selecione o nome de um animal para ver suas informações:</label>
+        <ul id="listaAnimais" onclick="carregarInformacoes(event)">
+            <!-- Itens da lista de animais serão carregados dinamicamente aqui -->
+            <li>Animal 1</li>
+            <li>Animal 2</li>
+            <li>Animal 3</li>
+            <!-- Adicione mais itens conforme necessário -->
+        </ul>
+
+        <!-- Área para exibir informações do animal selecionado -->
+        <div id="informacoesAnimal"></div>
+    </div>
+
+    <script>
+        // Função para carregar informações do animal selecionado
+        function carregarInformacoes(event) {
+            var informacoesAnimal = document.getElementById("informacoesAnimal");
+
+            // Aqui você pode usar o item clicado para carregar as informações do animal do banco de dados
+            var animalSelecionado = event.target.textContent;
+
+            // Exemplo: Exibir as informações na página
+            informacoesAnimal.innerHTML = "<p>Informações do animal " + animalSelecionado + " serão carregadas aqui.</p>";
+        }
+    </script>
+</body>
+</html>

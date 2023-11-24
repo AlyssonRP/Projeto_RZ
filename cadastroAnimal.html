@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Animal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f4f4; /* Cor de fundo do corpo */
+        }
+
+        .container-animal {
+            background-color: #fff; /* Cor de fundo do contêiner principal */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+            text-align: center;
+        }
+
+        h1 {
+            color: #2146F6; /* Cor do cabeçalho principal */
+        }
+
+        h4 {
+            color: #6A81F7; /* Cor do subtítulo */
+            margin-top: 10px;
+        }
+
+        .image-container {
+            margin-bottom: 16px;
+        }
+
+        .animal-image {
+            max-width: 100%;
+            max-height: 200px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #2146F6; /* Borda azul */
+            border-radius: 4px;
+        }
+
+        /* Estilo para os checkboxes radio */
+        .radio-group {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 16px;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+        }
+
+        .radio-group input {
+            margin-right: 5px;
+        }
+
+        /* Estilo para o botão */
+        button {
+            background-color: #E76E35; /* Cor do botão (laranja) */
+            color: #fff; /* Cor do texto do botão */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #C45A2B; /* Cor do botão ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="container-animal">
+        <h1>Cadastro de Animal</h1>
+        <div class="container-animal-form">
+            <!-- Campo para a foto do animal -->
+            <div class="image-container">
+                <div class="animal-image">
+                    <img src="img/propriedade.png" alt="Imagem de Perfil" width="150">
+                </div>
+            </div>
+
+            <h4>Número de Identificação</h4>
+            <input type="text">
+
+            <h4>Data de Nascimento</h4>
+            <input type="date">
+
+            <h4>Data ao Desmame</h4>
+            <input type="date">
+
+            <!-- Raça -->
+            <h4>Raça</h4>
+            <select>
+                <option value="raca1">Raça 1</option>
+                <option value="raca2">Raça 2</option>
+                <!-- Adicione outras raças conforme necessário -->
+            </select>
+
+            <!-- Categoria -->
+            <h4>Categoria</h4>
+            <select>
+                <option value="categoria1">Categoria 1</option>
+                <option value="categoria2">Categoria 2</option>
+                <!-- Adicione outras categorias conforme necessário -->
+            </select>
+
+            <h4>Peso ao Desmame</h4>
+            <input type="text">
+
+            <h4>Peso ao Nascimento</h4>
+            <input type="text">
+
+            <!-- Sexo -->
+            <h4>Sexo</h4>
+            <div class="radio-group">
+                <label><input type="radio" name="sexo" value="feminino"> Feminino</label>
+                <label><input type="radio" name="sexo" value="masculino"> Masculino</label>
+            </div>
+
+            <!-- Botão de Salvar -->
+            <button>Salvar</button>
+        </div>
+    </div>
+</body>
+</html>

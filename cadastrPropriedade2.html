@@ -46,23 +46,26 @@
             border-radius: 4px;
         }
 
-        /* Estilo para os checkboxes */
+        /* Estilo para os checkboxes e radio buttons */
         .checkbox-group {
             display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap; /* Adicionando flex-wrap para que os checkboxes quebrem para a próxima linha quando não houver espaço suficiente */
+            flex-direction: column; /* Alterando para empilhar os checkboxes/radio buttons verticalmente */
+            margin-bottom: 16px; /* Adicionando margem abaixo dos checkboxes/radio buttons */
         }
 
         .checkbox-group label {
             display: flex;
             align-items: center;
-            margin-bottom: 10px; /* Adicionando margem abaixo dos checkboxes */
+            margin-bottom: 10px; /* Adicionando margem abaixo dos checkboxes/radio buttons */
+            color: #6A81F7; /* Cor do nome dos checkboxes/radio buttons */
         }
 
         .checkbox-group input {
-            margin-right: 5px; /* Adicionando margem à direita dos checkboxes */
+            margin-right: 5px; /* Adicionando margem à direita dos checkboxes/radio buttons */
             border: 2px solid #E76E35; /* Borda laranja */
             border-radius: 4px;
+            background: linear-gradient(0deg, #E76E35, #E76E35),
+                        linear-gradient(0deg, #FFFFFF, #FFFFFF); /* Estilo de borda */
         }
 
         /* Estilo para o botão */
@@ -84,23 +87,6 @@
     <div class="container-propriedade">
         <h1>Cadastro de Propriedade</h1>
         <div class="container-propriedade-form">
-            <h4>Nome da Propriedade</h4>
-            <input type="text">
-
-            <h4>Localização</h4>
-            <input type="text">
-
-            <h4>Área Total (Hectares)</h4>
-            <input type="number">
-
-            <h4>Atividades Realizadas</h4>
-            <select>
-                <option value="caprino">Caprino</option>
-                <option value="ovino">Ovino</option>
-            </select>
-
-            <h4>Responsável Técnico</h4>
-            <input type="text">
 
             <!-- Recursos Hídricos -->
             <h4>Recursos Hídricos</h4>
@@ -113,8 +99,8 @@
             <!-- Uso de Práticas Sustentáveis e/ou Programas de Conservação Ambiental -->
             <h4>Uso de Práticas Sustentáveis e/ou Programas de Conservação Ambiental</h4>
             <div class="checkbox-group">
-                <label><input type="checkbox">Práticas Sustentáveis</label>
-                <label><input type="checkbox">Programas de Conservação Ambiental</label>
+                <label><input type="radio" name="praticas" value="sim">Sim</label>
+                <label><input type="radio" name="praticas" value="nao">Não</label>
             </div>
             
             <h4>Quais?</h4>
