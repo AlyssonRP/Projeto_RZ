@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Animal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f4f4; /* Cor de fundo do corpo */
+        }
+
+        .container-animal {
+            background-color: #fff; /* Cor de fundo do contêiner principal */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+            text-align: center;
+        }
+
+        h1 {
+            color: #2146F6; /* Cor do cabeçalho principal */
+        }
+
+        .animal-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .animal-info div {
+            margin-bottom: 10px;
+        }
+
+        .animal-info label {
+            color: #6A81F7; /* Cor do nome dos campos */
+        }
+
+        .animal-info span {
+            display: block;
+            color: #333; /* Cor do texto das informações */
+        }
+
+        .animal-info img {
+            border-radius: 8px;
+            margin-top: 20px;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-animal">
+        <h1>Detalhes do Animal</h1>
+        <div class="animal-info">
+        <div>
+        <img id="imagemAnimal" src="caminho/para/imagem.jpg" alt="Foto do Animal">
+    </div>
+            
+            <div>
+                <label for="numeroIdentificacao">Número de Identificação:</label>
+                <span id="numeroIdentificacao">123</span>
+            </div>
+            <div>
+                <label for="pesoAtual">Peso Atual:</label>
+                <span id="pesoAtual">50 kg</span>
+            </div>
+            <div>
+                <label for="dataNascimento">Data de Nascimento:</label>
+                <span id="dataNascimento">01/01/2020</span>
+            </div>
+            <div>
+                <label for="dataDesmame">Data de Desmame:</label>
+                <span id="dataDesmame">01/07/2020</span>
+            </div>
+            <div>
+                <label for="tipo">Tipo:</label>
+                <input type="radio" id="boi" name="tipo" class="radio-button" checked>
+                <label for="boi">Boi</label>
+            </div>
+
+            <!-- Sexo (Botões de rádio já selecionados) -->
+            <div>
+                <label for="sexo">Sexo:</label>
+                <input type="radio" id="masculino" name="sexo" class="radio-button" checked>
+                <label for="masculino">Masculino</label>
+            </div>
+            <div>
+                <label for="raca">Raça:</label>
+                <span id="raca">Angus</span>
+            </div>
+            <div>
+                <label for="categoria">Categoria:</label>
+                <span id="categoria">Gado de Corte</span>
+            </div>
+            <div>
+                <label for="pesoNascimento">Peso ao Nascimento:</label>
+                <span id="pesoNascimento">25 kg</span>
+            </div>
+            <div>
+                <label for="pesoDesmame">Peso ao Desmame:</label>
+                <span id="pesoDesmame">150 kg</span>
+            </div>
+
+            
+</body>
+</html>
