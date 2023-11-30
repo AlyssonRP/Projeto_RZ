@@ -62,29 +62,13 @@
     <div class="container-rebanho">
         <h1>Rebanho</h1>
         <label>Selecione o nome de um animal para ver suas informações:</label>
-        <ul id="listaAnimais" onclick="carregarInformacoes(event)">
-            <!-- Itens da lista de animais serão carregados dinamicamente aqui -->
-            <li>Animal 1</li>
-            <li>Animal 2</li>
-            <li>Animal 3</li>
+        <ul id="listaAnimais">
+            <!-- Adicionando links ao redor dos itens da lista -->
+            <li><a href="informacoes_animal.html?animal=Animal1">Animal 1</a></li>
+            <li><a href="informacoes_animal.html?animal=Animal2">Animal 2</a></li>
+            <li><a href="informacoes_animal.html?animal=Animal3">Animal 3</a></li>
             <!-- Adicione mais itens conforme necessário -->
         </ul>
-
-        <!-- Área para exibir informações do animal selecionado -->
-        <div id="informacoesAnimal"></div>
     </div>
-
-    <script>
-        // Função para carregar informações do animal selecionado
-        function carregarInformacoes(event) {
-            var informacoesAnimal = document.getElementById("informacoesAnimal");
-
-            // Aqui você pode usar o item clicado para carregar as informações do animal do banco de dados
-            var animalSelecionado = event.target.textContent;
-
-            // Exemplo: Exibir as informações na página
-            informacoesAnimal.innerHTML = "<p>Informações do animal " + animalSelecionado + " serão carregadas aqui.</p>";
-        }
-    </script>
 </body>
 </html>
