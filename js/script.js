@@ -5,8 +5,7 @@ function validateFields(){
   document.geteElemntById('recover-password-button').disabled = !emailValid;
 
   const password = isPasswordValid();
-  document.getElementById('login-button').disabled
-  
+  document.getElementById('login-button').disabled;
 
   // verificar se o email não é vazio e se o email é válido
   // se verdadeiro, então habilitar o botão de recuperar senha
