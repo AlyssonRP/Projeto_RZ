@@ -9,30 +9,30 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
             min-height: 100vh;
-            align-items: center;
-            justify-content: center; /* Centraliza na tela verticalmente */
         }
 
         nav {
-            background-color: #333; /* Cor de fundo do menu lateral */
+            background-color: #333;
             color: #fff;
             width: 200px;
             padding: 20px;
             box-sizing: border-box;
-            margin-top: 0; /* Removendo a margem superior */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
         }
 
         nav label {
             display: block;
-            background-color: #2146F6; /* Cor de fundo azul para o label "Menu" */
-            padding: 10px;
-            text-align: center;
+            background-color: #2146F6;
+            padding: 20px;
+            text-align: left;
             color: #fff;
             margin-bottom: 10px;
-            width: 100%; /* Largura 100% do label para preencher a largura do menu */
-            box-sizing: border-box; /* Evita que o padding aumente a largura total */
+            width: 100%;
+            box-sizing: border-box;
         }
 
         nav .logged-in-user {
@@ -43,8 +43,74 @@
         nav a {
             text-decoration: none;
             color: #fff;
-            display: block;
             margin-bottom: 10px;
+        }
+
+        section {
+            margin: 20px;
+            text-align: left;
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+
+        .profileImage {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center; /* Centralizando verticalmente */
+        }
+
+        img {
+            border-radius: 50%;
+            width: 120px;
+            margin-right: 20px; /* Adicionando margem à direita da imagem */
+        }
+
+        .userInfo {
+            text-align: left;
+            width: 100%; /* Ajustado para ocupar a largura total disponível */
+            max-width: 400px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: #6A81F7;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #7FA4C5;
+            text-align: left;
+            font-size: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border-color: #2146F6;
+        }
+
+        .userName {
+            color: #2146F6;
+            font-weight: bold;
+        }
+
+        .userDetails {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap; /* Permite que os elementos se movam para a próxima linha quando não houver espaço suficiente */
+        }
+
+        .userDetails label,
+        .userDetails input {
+            flex: 0 0 100%; /* Garante que cada elemento ocupe 100% da largura disponível */
+            margin-right: 20px; /* Adicionando espaçamento entre os elementos */
         }
     </style>
 </head>
@@ -52,10 +118,53 @@
     <nav>
         <label>Menu</label>
         <div class="logged-in-user">Nome da Pessoa Logada</div>
-        <a href="#">Home</a>
-        <a href="#">Meu Perfil</a>
-        <a href="#">Equipamentos</a>
+        <a href="#" onclick="mostrarConteudo('home')">Home</a>
+        <a href="#" onclick="mostrarConteudo('perfil')">Meu Perfil</a>
+        <a href="#" onclick="mostrarConteudo('equipamentos')">Equipamentos</a>
         <a href="#">Sair</a>
     </nav>
+
+    <section id="conteudo">
+        <!-- O conteúdo da página será exibido aqui -->
+    </section>
+
+    <script>
+        function mostrarConteudo(conteudo) {
+            var conteudoDiv = document.getElementById('conteudo');
+
+            switch (conteudo) {
+                case 'home':
+                    conteudoDiv.innerHTML = '<h2>Bem-vindo à Página Inicial!</h2>';
+                    break;
+                case 'perfil':
+                    conteudoDiv.innerHTML = `
+                        <div class="profileImage">
+                            <img src="img/produtor.png" alt="Imagem de Perfil" width="120">
+                            <div class="userInfo">
+                                <h2>Proprietário</h2>
+                                <span class="userName">Nome do Usuário</span>
+                            </div>
+                        </div>
+                        
+                        <div class="userDetails">
+                            <label for="nomeCompleto">Nome Completo</label>
+                            <input type="text" id="nomeCompleto" name="nomeCompleto" value="Nome Completo do Usuário" disabled>
+                            
+                            <label for="dataNascimento">Data de Nascimento</label>
+                            <input type="date" id="dataNascimento" name="dataNascimento" value="Data de Nascimento do Usuário" disabled>
+                            
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" value="email@example.com" disabled>
+                        </div>
+                    `;
+                    break;
+                case 'equipamentos':
+                    conteudoDiv.innerHTML = '<h2>Cadastro de Propriedade</h2><p>Formulário de cadastro de propriedade aqui...</p>';
+                    break;
+                default:
+                    conteudoDiv.innerHTML = '<p>Selecione uma opção do menu.</p>';
+            }
+        }
+    </script>
 </body>
 </html>
